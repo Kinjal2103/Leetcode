@@ -13,17 +13,13 @@ public:
                 }else{
                     return binarySearch(a,st,mid-1);
                 }
-            }else if (mid == 0) {
-                return binarySearch(a, mid + 1, end);
-            } else if (mid == (int)a.size() - 1) {
-                return binarySearch(a, st, mid - 1);
             }
         }
         return -1; 
     }
     int peakIndexInMountainArray(vector<int>& arr) {
         int n=arr.size();
-        int ans=binarySearch(arr,0,n-1);
+        int ans=binarySearch(arr,1,n-2);
         return ans;
     }
 };
